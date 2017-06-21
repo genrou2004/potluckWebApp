@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="base :: head" >
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<nav th:replace="base :: nav"></nav>
+<div class="container">
+    <br/><br/>
+    <table class="table table-striped">
+        <tr>
+            <th>Person</th>
+            <th>Item</th>
+        </tr>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.chefname}"></td>
+            <td th:text="${item.dish}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
