@@ -1,6 +1,5 @@
 package com.raya.model;
 
-import org.hibernate.annotations.Table;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.persistence.*;
@@ -9,7 +8,7 @@ import javax.persistence.*;
  * Created by raya on 6/20/17.
  */
 @Entity
-@javax.persistence.Table(name = "studentTable")
+
 public class Student {
 
     @Id

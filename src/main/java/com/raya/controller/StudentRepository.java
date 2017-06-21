@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by raya on 6/20/17.
  */
-public interface StudentRepository extends CrudRepository{
+public interface StudentRepository extends CrudRepository<Student,Integer>{
 
 }

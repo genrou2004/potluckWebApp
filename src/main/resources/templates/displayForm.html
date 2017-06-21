@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th ="www.thymeleaf.org">
-<head>
+<head th:replace="base :: head" >
     <meta charset="UTF-8" />
-    <title>Display Form</title>
+    <title>Display Result</title>
 </head>
 <body>
-<div class="container">
-    <form action="#" th:action="@{/all}" th:object="${student}" method="get">
-
-    </form>
-</div>
+<nav th:replace="base :: nav"></nav>
+<table class="table table-striped">
+    <tr>
+        <th>Student</th>
+        <th>Food Type</th>
+    </tr>
+    <tr th:each="students : ${student}">
+        <td th:text="${students.firstName}"></td>
+        <td th:text="${students.foodType}"></td>
+    </tr>
+</table>
 </body>
 </html>
+
+
+
